@@ -4,13 +4,13 @@ Web Scrapping is an easy way to get a large volume of data in a relatively short
 <b>Steps:-</b>
 1. <b>Install selenium using pip <br/><b>pip3 install selenium</b>
  
- 2. <b>Download Chrome Driver:</b>
+2. <b>Download Chrome Driver:</b>
     To download web drivers, you can choose any of below methods- 
     You can either directly download chrome driver from the below link-
     https://chromedriver.chromium.org/downloads
     Or, you can download it directly using below line of code-driver = webdriver.Chrome(ChromeDriverManager().install())
     
- 3. <b>import libraries</b><br/>
+3. <b>import libraries</b><br/>
     Beautiful Soup is a Python library for pulling data out of HTML
     <b>from bs4 import BeautifulSoup</b><br/>
     
@@ -24,15 +24,15 @@ Web Scrapping is an easy way to get a large volume of data in a relatively short
     <b>import time</b><br/>
     
     
-    4. <b>Install Driver</b><br/>
+4. <b>Install Driver</b><br/>
        <b>driver = webdriver.Chrome(ChromeDriverManager().install())</b><br/>
         
-    5. <b>Check the Sourc code for the url and find the data you want to extract</b><br/>
+5. <b>Check the Sourc code for the url and find the data you want to extract</b><br/>
     
-    6. <b>Define the Columns </b><br/>
+6. <b>Define the Columns </b><br/>
        </b><br/>df=pd.DataFrame(columns=['serial no','Registration Number','Date of Grant','Name Factory Address','IS NO','Product','Status','Valid Upto','Models deleted from scope','Brand','View Models'])</b><br/>
        
-     7. <b>Set a range and url</b><br/>
+7. <b>Set a range and url</b><br/>
          If the data is large then set a range put it inside the loop to ignor the server error. and also set the url like 
            <b>for param in range(1,11):<br/>
             url="https://www.crsbis.in/BIS/Lims_registration.do?hmode=getLimsData&regNo=NA==&prodCat=&models="<br/>
@@ -44,8 +44,8 @@ Web Scrapping is an easy way to get a large volume of data in a relatively short
             rows = soup.find("table").find("tbody").find_all("tr")</b><br/>
             
             
-     8. <b>Extract the Data</b><br/>
-		Extract the data using for loop
+8. <b>Extract the Data</b><br/>
+      Extract the data using for loop
             <b>for row in rows:<br/>
                 s_no=row.find_all('td')[0].get_text().replace(" ","").replace("\n","")<br/>
                 Registration_Number=row.find_all('td')[1].get_text().replace(" ","").replace("\n","")<br/>
