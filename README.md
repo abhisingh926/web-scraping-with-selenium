@@ -27,7 +27,7 @@ Web Scrapping is an easy way to get a large volume of data in a relatively short
 4. <b>Install Driver</b><br/>
        <b>driver = webdriver.Chrome(ChromeDriverManager().install())</b><br/>
         
-5. <b>Check the Sourc code for the url and find the data you want to extract</b><br/>
+5. <b>Check the Source code and find the data you want to extract</b><br/>
     
 6. <b>Define the Columns </b><br/>
        </b><br/>df=pd.DataFrame(columns=['serial no','Registration Number','Date of Grant','Name Factory Address','IS NO','Product','Status','Valid Upto','Models deleted from scope','Brand','View Models'])</b><br/>
